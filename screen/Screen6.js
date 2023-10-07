@@ -7,8 +7,8 @@ export default function App() {
   const mapRef = useRef(null); 
 
   const [mapRegion, setMapRegion] = useState({
-    latitude: 9.7535864,
-    longitude: 123.966893,
+    latitude: 9.711639,
+    longitude: 123.947998,
     latitudeDelta: 0.0922,
     longitudeDelta: 0.0421,
   });

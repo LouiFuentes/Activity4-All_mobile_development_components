@@ -16,9 +16,9 @@ export default function Screen2() {
 
       <View style={styles.containers}>
         <View style={styles.containerss}>
-          <Avatar.Icon size={44} icon="folder" />
-          <Avatar.Image size={44} source={require('../assets/icons.png')} />
-          <Avatar.Text size={44} label="XD" />
+          <Avatar.Image size={100} source={require('../assets/woman.png')}  />
+          <Avatar.Image size={100} source={require('../assets/hacker.png')} />
+          <Avatar.Image size={100} source={require('../assets/profile.png')}  />
         </View>
         <View style={styles.containers1}>
           <Text style={styles.titles1}>Avatar</Text>
@@ -53,9 +53,9 @@ export default function Screen2() {
       </View>
       <View style={styles.containers}>
       <View style={styles.containersss}>
+      <Chip icon="camera" onPress={() => console.log('Pressed')}>Camera</Chip>
       <Chip icon="information" onPress={() => console.log('Pressed')}>Information</Chip>
-      <Chip icon="heart" onPress={() => console.log('Pressed')}>Heart</Chip>
-      <Chip icon="home" onPress={() => console.log('Pressed')}>Home</Chip>
+      <Chip icon="school" onPress={() => console.log('Pressed')}>School</Chip>
       </View>
       <View style={styles.containers1}>
         <Text style={styles.titles1}>Chip</Text>
@@ -63,9 +63,9 @@ export default function Screen2() {
     </View>
     <View style={styles.containers}>
         <View style={styles.containerss1}>
-        <TextInput label="Email" value={text} onChangeText={onChangeText} />
+        <TextInput label="Enter Password" value={text} onChangeText={onChangeText} />
         <HelperText type="error" visible={hasErrors()}>
-          Email address is invalid!
+          Password is invalid!
         </HelperText>
         </View>
         <View style={styles.containers1}>
@@ -87,20 +87,22 @@ const styles = StyleSheet.create({
     width: '100%',
     margin: 5,
     borderRadius: 10,
-    borderColor: '#76625a',
-    borderWidth: 2,
+    borderColor: 'darkblue',
+    borderWidth: 4,
     height: 'auto',
     flexDirection: 'column',
     justifyContent: 'flex-end',
+    backgroundColor: '#fdf5e6',
+
 
   },
   containers1: {
     borderTopWidth: 2,
-    borderColor: '#76625a',
+    borderColor: 'darkblue',
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5,
-    backgroundColor: '#fbfaeb',
+    backgroundColor: '#ffdab9',
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10
   },
@@ -125,7 +127,8 @@ const styles = StyleSheet.create({
    gap: 10
   },
   titles1: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontSize: 20,
   }
 
 

@@ -30,11 +30,10 @@ export default function App() {
     <NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen name="Main Menu" component={MyTabs} />
-      <Stack.Screen name="Page1" component={Screen2} />
-      <Stack.Screen name="Page2" component={Screen3} />
-      <Stack.Screen name="Page3" component={Screen4} />
-      <Stack.Screen name="Page4" component={Screen5} />
-      <Stack.Screen name="Page5" component={Screen6} />
+      <Stack.Screen name="Page1" component={Screen6} />
+      <Stack.Screen name="Page2" component={Screen4} />
+      <Stack.Screen name="Page3" component={Screen3} />
+      <Stack.Screen name="Page4" component={Screen2} />
     </Stack.Navigator>
   </NavigationContainer>
   );

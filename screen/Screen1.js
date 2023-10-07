@@ -9,12 +9,7 @@ export default function Screen1({ navigation }) {
   return (
     <KeyboardAvoidingView>
     <View style={styles.container}>
-      <Text style={styles.titles1}>React Native</Text>
-      <Searchbar
-      placeholder="Search"
-      onChangeText={onChangeSearch}
-      value={searchQuery}
-    />
+      <Text style={styles.titles1}>React Native </Text>
       <View style={styles.container1}>
         <TouchableOpacity onPress={() => navigation.navigate('Page1')}
           style={styles.containers}>
@@ -48,7 +43,7 @@ export default function Screen1({ navigation }) {
         <Text style={styles.titles}>Page 3</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Page5')}
+        <TouchableOpacity onPress={() => navigation.navigate('Page4')}
           style={styles.containers}>
           <View style={styles.gridItem}>
           <Image
@@ -66,19 +61,20 @@ export default function Screen1({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1, 
-    margin: 8,
+    margin: 10,
     alignItems: 'center',
     justifyContent: 'flex-end',
-    marginBottom: 50
+    marginBottom: 50,
+    marginTop: 150,
   },
   gridItem: {
     flex: 1,
-    backgroundColor: '#fbfaeb',
+    backgroundColor: 'lightgray',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 8,
-    borderWidth: 1,
-    borderColor: 'lightgray',
+    borderWidth: 2.5,
+    borderColor: 'gray',
   },
   title: {
     fontSize: 16,
@@ -90,20 +86,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     gap: 10,
-    marginVertical: 5
+    marginVertical: 10
 
   },
   containers: {
     flex: 1,
-    height: 130,
+    height: 150,
     borderColor: '#76625a',
     borderWidth: 0.5,
     borderRadius: 8
   },
   titles1: {
-    color: '#76625a',
+    color: 'darkblue',
     fontSize: 50,
     fontWeight: 'bold',
+    fontStyle: 'italic',
     
     textDecorationLine: 'underline',
   },

@@ -26,7 +26,7 @@ export default function Screen2() {
       <View style={styles.containers}>
       
         <View style={styles.containerss1}>
-        <Button icon="camera" mode="contained" onPress={onToggleSnackBar}>
+        <Button icon="heart" mode="contained" onPress={onToggleSnackBar}>
         Show Snackbar
       </Button>
         </View>
@@ -45,15 +45,15 @@ export default function Screen2() {
       <View style={styles.containers}>
         <View style={styles.containerss1}>
         <TextInput
-      label="Email"
+      label="Username"
       value={text}
       onChangeText={text => setText(text)}
     />
      <TextInput
       mode="outlined"
-      label="Email"
-      placeholder="Enter Email"
-      right={<TextInput.Affix text="/100" />}
+      label="Password"
+      placeholder="Enter Password"
+      right={<TextInput.Affix text="/50" />}
     />
         </View>
         <View style={styles.containers1}>
@@ -66,7 +66,9 @@ export default function Screen2() {
       onValueChange={value => setValue(value)}
       value={value}>
       <ToggleButton icon="format-align-left" value="left" />
+      <ToggleButton icon="format-align-center" value="center" />
       <ToggleButton icon="format-align-right" value="right" />
+      <ToggleButton icon="format-align-justify" value="justify" />
     </ToggleButton.Group>
    
       </View>
@@ -113,20 +115,21 @@ const styles = StyleSheet.create({
     width: '100%',
     margin: 5,
     borderRadius: 10,
-    borderColor: '#76625a',
-    borderWidth: 2,
+    borderColor: 'darkred',
+    borderWidth: 4,
     height: 'auto',
     flexDirection: 'column',
     justifyContent: 'flex-end',
+    backgroundColor: '#fdf5e6',
 
   },
   containers1: {
     borderTopWidth: 2,
-    borderColor: '#76625a',
+    borderColor: 'darkred',
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5,
-    backgroundColor: '#fbfaeb',
+    backgroundColor: '#ffdab9',
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10
   },
@@ -145,7 +148,8 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   titles1: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontSize: 20,
   }
 
 
