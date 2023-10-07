@@ -1,50 +1,42 @@
-
-import { createStackNavigator } from '@react-navigation/stack';
+import * as React from 'react';
+import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import Getstarted from './screens/Getstarted';
-import Home from './screens/Home';
-import Screen1 from './screens/Screen1';
-import Screen2 from './screens/Screen2';
-import Screen3 from './screens/Screen3';
-import Screen4 from './screens/Screen4';
-import Screen5 from './screens/Screen5';
-import FlatList from './screens/Flatlist';
-import WebView from './screens/WebView';
-import Video from './screens/Video';
-import ViewPager from './screens/ViewPager';
-import Svg from './screens/SVG';
-const Stack = createStackNavigator();
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Screen1 from './screen/Screen1';
+import Screen2 from './screen/Screen2';
+import Screen3 from './screen/Screen3';
+import Screen4 from './screen/Screen4';
+import Screen5 from './screen/Screen5';
+import Screen6 from './screen/Screen6';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
+const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
+function MyTabs() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={Screen1}  options={{ headerShown: false, tabBarIcon: ({ color, size }) => (
+        <Ionicons name="home" color={color} size={size} />
+      ),}}/>
+      <Tab.Screen name="Profile" component={Screen5} options={{ headerShown: false,tabBarIcon: ({ color, size }) => (
+        <Ionicons name="person" color={color} size={size} />
+      ), }}/>
+    </Tab.Navigator>
+  );
+}
 export default function App() {
   return (
-   
     <NavigationContainer>
-    <Stack.Navigator screenOptions={{ headerShown: false}}>
-    <Stack.Screen
-      name="GetStarted"
-      component={Getstarted}
-      options={{
-        title: 'WELCOME',
-        headerTitleAlign: 'center', 
-      }}
-    />
-      <Stack.Screen name="Home" component={Home}  options={{
-        title: 'MAIN MENU',
-        headerTitleAlign: 'center', 
-      }}/>
-      <Stack.Screen name="Screen1" component={Screen1} />
-      <Stack.Screen name="Screen2" component={Screen2} />
-      <Stack.Screen name="Screen3" component={Screen3} />
-      <Stack.Screen name="Screen4" component={Screen4} />
-      <Stack.Screen name="Screen5" component={Screen5} />
-      <Stack.Screen name="Web" component={WebView} />
-      <Stack.Screen name="FlatList" component={FlatList} />
-      <Stack.Screen name="Video" component={Video} />
-      <Stack.Screen name="View" component={ViewPager} />
-      <Stack.Screen name="Svg" component={Svg} />
+    <Stack.Navigator>
+      <Stack.Screen name="Main Menu" component={MyTabs} />
+      <Stack.Screen name="Page1" component={Screen2} />
+      <Stack.Screen name="Page2" component={Screen3} />
+      <Stack.Screen name="Page3" component={Screen4} />
+      <Stack.Screen name="Page4" component={Screen5} />
+      <Stack.Screen name="Page5" component={Screen6} />
     </Stack.Navigator>
-    </NavigationContainer>
-   
+  </NavigationContainer>
   );
 }
 
