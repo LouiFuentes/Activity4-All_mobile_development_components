@@ -8,6 +8,7 @@ import Screen3 from './screen/Screen3';
 import Screen4 from './screen/Screen4';
 import Screen5 from './screen/Screen5';
 import Screen6 from './screen/Screen6';
+import Screen7 from './screen/Screen7';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 const Tab = createBottomTabNavigator();
@@ -34,6 +35,7 @@ export default function App() {
       <Stack.Screen name="Page2" component={Screen4} />
       <Stack.Screen name="Page3" component={Screen3} />
       <Stack.Screen name="Page4" component={Screen2} />
+      <Stack.Screen name="Page5" component={Screen7} />
     </Stack.Navigator>
   </NavigationContainer>
   );

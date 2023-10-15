@@ -41,7 +41,7 @@ export default function Screen2() {
             }}
           />
           <Checkbox
-            status={checked ? 'checked' : 'unchecked'}
+            status={checked ? 'unchecked' : 'checked'}
             onPress={() => {
               setChecked(!checked);
             }}

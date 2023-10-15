@@ -53,6 +53,18 @@ export default function Screen1({ navigation }) {
         <Text style={styles.titles}>Page 4</Text>
           </View>
         </TouchableOpacity>
+        </View>
+        <View style={styles.container1}>
+        <TouchableOpacity onPress={() => navigation.navigate('Page5')}
+          style={styles.containers}>
+          <View style={styles.gridItem}>
+          <Image
+          source={require('../assets/icons.png')}
+          style={{ width: 100, height: 100 }}
+        />
+        <Text style={styles.titles}>Page5 </Text>
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
     </KeyboardAvoidingView>
